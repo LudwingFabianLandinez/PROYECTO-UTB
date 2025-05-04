@@ -1,0 +1,28 @@
+/*Antes debo Linkear este archivo en todos los archivos de HTML*/
+
+/*ARCHIVO DE blogs.html*/
+/*Cuando la Pantalla llegue a 900px los estilos se llevan a cabo*/
+/*En el Primer DIV Tenemos 3 filas (una que contiene el título, otra que contiene la imagen y la otra contiene la iformación)  Se quiere que cuando se recoja la pantalla el texto de la derecha pase abajo de la Foto, para eso tomamos la clase que esta dentro con otra clase en class llamada blogs-main-new(class="grid-container blogs-main-new") */
+@media (max-width: 900px) {
+    .blogs-main-new {
+        grid-template-columns: 1fr; /*La columa cambie a una sola fracción*/
+        grid-template-rows: 4fr; /*Se convierta de tres filas a cuatro filas*/
+    }
+    .blogs-new-img-container {
+        grid-row: 2; /*La imagen se vaya a la fila 2*/
+    }
+    .blogs-news-info-container {
+        grid-column: 1; /*La Informacion se vaya a la columna 1*/
+        grid-row: 3; /*Pero que La Informacion tambien se vaya a la fila 3*/
+    }
+}
+
+/*En el segundo DIV tenemos 3 columnas con los  últimos Blogs, lo que se requiere ahora es que cuando se vaya recogiendo, se pase de 3 columnas a 2 columnas y si se sigue recogiendo pase de 2 columnas a 1 columna*/
+
+.blogs-post-container .post-container {
+  
+}
+
+
+
+

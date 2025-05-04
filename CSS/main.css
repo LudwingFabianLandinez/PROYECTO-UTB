@@ -1,0 +1,318 @@
+/* Por lo general CSS trae estilos propios que estaremos quitando con estas líneas*/
+body {
+    font-family: 'Times New Roman', Times, serif; /*Tipo de letra de la Fuente que utilizaré en toda la página"*/
+    margin: 0;
+    padding: 0;
+}
+
+.home-body { /*CON ESTO PODEMOS HACER SCROLL*/
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+}
+
+.grid-container {
+    max-width: 980px; /*Delimito el área del contenedor*/
+    margin: auto; /*Automaticamente centra el contenido*/
+}
+
+/*ARCHIVO index.html*/
+/*1. ESTILOS DEL HEADER DEL HTML*/
+
+/* Tenemos etiquetas ancla "a" que le quitaremos tambien los estilos que trae por default*/
+a {
+    text-decoration: none; /*Quitar el subrayado de las palabras*/
+    display: inline; /*Para que se ponga de manera horizontal*/
+    color: black; /*Por lo general siempre se colocan en azul*/
+}
+
+/*Continuamos con la Etiqueta de "header"*/
+header {
+    width: 100%; /*Vaya de derecha a izquierda en un 100%*/
+    height: 140px; /*Ancho de cada contenedor (div) de arriba a abajo*/
+    display: grid; /*Se haga una Cuadricula*/
+    grid-template-rows: 1fr 1fr; /*Que tenga dos filas*/
+
+}
+
+/*COMENZAMOS A GENERAR LAS "class"*/
+
+/*Llamamos a la etiqueta "header" que tiene adentro una "class" llamada header-icons-container*/
+header .header-icons-container {
+    width: 100%; /*Sea igual de ancho que el padre que es el "header"*/
+    height: 50px; /*El padre "header" tiene 140px para poder dividir los dos contenedores "div"*/
+    display: grid; /*Para posicionar el contenedor que es el "div"*/
+    background-color: red; /*Color de fondo del "div"*/
+}
+
+/*Posicionamos el "div" que está dentro de "section" el cual adentro tiene una clase que es "icons"*/
+header .header-icons-container .icons {
+    width: 300px;
+    height: auto; /*Que sea igual de grande como el padre*/
+    display: flex; /*Posiciona los elementos dentro del "div" o la barra*/
+    justify-items: flex-end; /*Se posicione los iconos al final de la barra*/
+    align-items: center; /*Se centren los iconos en el Contenedor "div" de arriba abajo*/
+    justify-content: space-between; /*Se les da un espacio entre ellos*/
+    justify-self: end; /*Los envía al final del "div" o barra*/
+    margin-right: 50px; /*Separa el último Icono del margen derecho (al final*/
+}
+
+/*La parte del "nav" contiene dos secciones */
+nav {
+    display: grid; /*Separa más abajo o secciona los dos ultimos contenedores ( el del "Logo del Sitio" y el de "Sobre el Sitio"*/
+    grid-template-columns: 1fr 1fr; /*Los coloca uno al lado del otro*/
+    height: 90px;
+}
+
+nav .nav-logo-container {
+    margin-left: 50px; /*Despegamos el Logo del lado derecho que está muy pegado*/
+}
+
+nav .nav-logo-container img {
+    width: 100px; /*Ancho del Logo*/
+    margin-top: 10px;/*Para separar el logo de la parte de arriba*/
+    margin-left: 120px; /*Separa el Logo del borde de la parte ixquierda*/
+}
+
+nav .profile-link {
+    display: flex; /*Posiciona los elementos dentro del "div" o la barra*/
+    align-items: center; /*Se centra en la mitad del div en todos los sentidos*/
+    justify-content: flex-end; /*Se vaya al fondo del div*/
+    margin-right: 170px; /*Se separe del la pared de la derecha*/
+}
+
+nav .profile-link a {
+    color: black; /*La letra sea Negra*/
+    border-bottom: 1px solid black; /*La frease se le coloque un rayado*/
+}
+
+/*2. ESTILOS DEL MAIN DEL HTML*/
+
+/*Vamos al main: nos vamos a la clase del main..La Fraccion de la MItad es más grande y ahi se colocará el texto y el botón*/
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; 
+    height: 100%; /*La altura sea total*/
+    background-image: url(/assets/2.png); /*Colocamos la imagen de fondo*/
+    background-position: center;/*La imagen no se mueva y se quede en el centro*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Vamos a la section: De las tres columnas se hace que se justifique el texto y el botón en la parte del centro*/
+.home-main section {
+    display: grid;
+    grid-column: 2; /*Manda el texto y el botón a la columna 2*/
+    justify-items: center;
+    height: 350px; /*La altura*/
+    margin-top: 80px; /*Distancia del margen superior a has las letras de "Conoce más a la Finca..."*/
+}
+
+/*Vamos al Texto: nos vamos a la clase del texto */
+
+.home-main-text { 
+    font-size: 30px;/*Agrada el tamaño del título de "Conoce más a la Finca...."*/
+    font-weight: 700px; /*Ancho de Fuente"*/
+    letter-spacing: 10px;  /*Espacio entre las letras del título*/
+    color: black;
+    text-align: center; /*Hace centrado del título*/
+    color: white;
+}
+
+.home-main-button {
+    width: 110px; /*Ancho del Botón*/
+    height: 40px; /*Alto del Botón*/
+    background: red;
+    display: grid; /*Para el Botón*/
+    align-items: center; /*Alienar el Botón al centro*/
+}
+
+.home-main-button a {
+    font-weight: 700;
+    font-size: 14px; /*Tamaño de la letra del botón*/
+    color:white; /*Color de la letra del botón*/
+}
+
+/*ARCHIVO blogs.html*/
+/*1. PRIMERA SECCION EL MAIN*/
+
+.blogs-main {
+    display: grid; /*La parte central (main) la dividirá en bloques*/
+}
+
+/*PARTE IZQUIERDA DE LA SECCION*/
+.blogs-news-container {
+    background: #D2D2CF; 
+    padding: 0 240px 40px; /* 0 de la partes de arriba, 50px que es la parte de derecha a izquierda, 40px de la parte de abajo*/ 
+}
+
+.blogs-main-new {
+    display: grid;/*Tengo dos bloques*/
+    grid-template-columns: 2fr 1fr; /*La fracción de la derecha es mucho más ancha que el de la izquieda*/
+    grid-template-rows: 2fr;
+}
+
+.blogs-news-img-container {
+    grid-column: 1; /*SE POSICIONE EN LA PRIMERA COLUMNA.
+    Establece la posición inicial de un elemento en la primera línea de columna de la cuadrícula, es decir, el título iria en la primer parte de la colunma.
+    */
+}
+
+.blogs-news-img-container img { /*Dimensiones de la Imagen*/
+width: 40%; /*Ancho de la Imagen*/
+height: 230px;
+}
+
+/*PARTE DERECHA DE LA SECCIÓN*/
+.blogs-news-info-container {
+    grid-column: 2; /*SE POSICIONE EN LA SEGUNDA COLUMNA.
+    */
+}
+
+.blogs-news-info-container P {
+    margin-bottom: 35px;
+}
+
+.blogs-post-container { 
+    padding: 0 70px 40px; /*Se separa la Segunda sección de los bordes interno, es la parte donde va el titulo "Últimos Blogposts*/
+} 
+
+.blogs-post-container h3 {
+    border-bottom: 1px solid black; /*Es la Línea de abajo separadora del Título*/
+    padding-bottom: 10px; /*Se separe abajo*/
+    text-align: center; /*Se centra el titulo "Últimos Blogposts*/
+}
+
+.blogs-button { /*Generamos el Botón*/
+    border: 1px solid red; /*Bordes el Botón*/
+    padding: 10px 20px; /*Bordes el Botón de arriba a abajo y luego de derecha a Izquierda*/
+    font-size: 13px; /*Tamaño de la letra*/
+}
+
+.blogs-post-container .post-container {
+    display: inline-block; /*La etiqueta de "article" viene por default block, y acá lo que se hace es que se coloque en inline.block para que se coloque horizontal y que no genere el espacio*/
+    padding-left: 10px; /*Tengan espacio entre ellos*/
+    max-width: 30%;
+    margin-bottom: 50px; 
+}
+
+.blogs-post-container .post-container p {
+    margin-bottom: 30px;
+}
+
+.blogs-post-container .post-container img {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    border-top: 35px solid red; /*Sería un borde ancho*/
+    text-align: center; /*El texto se alinee en el Centro*/
+}
+
+footer p {
+    color: white;
+    margin-top: 30px;
+}
+
+/*ARCHIVO blog.html*/
+.blogpost-img-container {
+    padding: 0 50px 40px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
+}
+
+.blogpost-img-container img {
+    width: 100%;
+}
+
+/*Le damos forma y estructura al contenedor principla de la informacion escrita del blogpost*/
+.blogpost-main-container {
+    padding: 0 50px 40px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
+}
+
+/*Le damos estilo al h3*/
+.blogpost-main-container h3 {
+    border-bottom: 1px solid black; /*Agrego la línea separadora del título */
+    padding-bottom: 20px; /*Separación del titulo con la linea de borde*/
+}
+
+/*Le damos estilo al h1*/
+.blogpost-main-container article h1 {
+    font-size: 30px;
+}
+
+/*ARCHIVO INFROMACION DEL CONTACTO*/
+.contact-main-container {
+    width: 100%;
+    min-height: 250px; 
+    background-color: #D2D2CF;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-main-container div {
+    display: inline-block; /*Ayuda a colocar los div uno al lado del otro*/
+    width: 49.5%; /*Ayuda a colocar los div uno al lado del otro*/
+    height: 100%;
+}
+
+/*Coloca borde a la palabra de la palabra ancla*/
+.contact-main-container div a {
+    border-bottom: 1px solid black; 
+    padding-bottom: 5px;
+}
+
+/*Damos estilos a los contenedores Left y Right*/
+.contact-main-container .contact-left, .contact-right {
+    text-align: initial; /*Estaba en el centro y esto lo que hace es alinear el texto al inicio del lado izquierdo*/
+    margin-top: 85px; /*Separa el texto de la imagen hacia abajo*/
+}
+
+/*Damos estilos a las Imagenes*/
+
+.contact-main-container img {
+    width: 100px;
+}
+
+/*ARCHIVO perfil.html*/
+.profile-main-container {
+    padding: 70px; /*70px arriba y abajo, 40px izquierdo y derecho*/
+    background-color: #D2D2CF;
+    margin-bottom: 50px; /*Un poco de espacio en la parte de abajo*/
+}
+
+/*Démosle dimensiones a la Imagen*/
+.profile-main-container img {
+    width: 320px;
+    margin-right: 30px; /*No esté pegado el contenido del lado derecho*/
+}
+
+/*Vienes del HTML que maneja dos clases dentro de una sola clase*/
+.profile-main-container .profile-container {
+    display: flex;
+}
+
+/*Parte donde están los Proyectos*/
+.profile-main-proyects {
+    padding: 0 50px 40px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
+
+}
+
+.profile-main-proyects h3 {
+    border-bottom: 1px solid black; /*Es el borde del Titulo*/
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+/*Contenedor Principal que lleva los Proyectos*/
+.proyects-main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*Tres columnas*/
+}
+
+/*Se les separa para que los textos no estén pegados*/
+.proyects-container {
+    padding: 0 5px; /*0 arriba y abajo y 5px en derecha e izquierda*/
+}
