@@ -220,16 +220,17 @@ footer p {
 
 /*ARCHIVO blog.html*/
 .blogpost-img-container {
-    padding: 0 50px 40px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
+    padding: 10px 340px 0px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
 }
 
 .blogpost-img-container img {
     width: 100%;
+    
 }
 
 /*Le damos forma y estructura al contenedor principla de la informacion escrita del blogpost*/
 .blogpost-main-container {
-    padding: 0 50px 40px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
+    padding: 0 50px 0px /*0 porque arriba no necesito nada, 50px del lado derecho-izquierdo, 40px de la parte de abajo */
 }
 
 /*Le damos estilo al h3*/
@@ -316,3 +317,4 @@ footer p {
 .proyects-container {
     padding: 0 5px; /*0 arriba y abajo y 5px en derecha e izquierda*/
 }
+
